@@ -7,7 +7,7 @@ services:
     container_name: waf
     build:
       context: ./
-      dockerfile: ./dockerfile
+      dockerfile: ./Dockerfile
     network_mode: "host"
     logging:
       driver: "json-file"
