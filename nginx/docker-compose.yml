@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  waf:
+    image: waf
+    restart: always
+    container_name: waf
+    build:
+      context: ./
+      dockerfile: ./dockerfile
+    network_mode: "host"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: 10m
+        max-file: "10"
